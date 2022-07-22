@@ -1,6 +1,6 @@
 
 make-dist: # создание дистрибутива для запуска
-	gradle clean
+	#gradle clean
 	gradle installDist
 
 run-dist: # запуск скомпилированного приложения на bash

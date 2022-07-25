@@ -2,6 +2,9 @@ plugins {
     id 'java'
     id 'application'
     id 'checkstyle'
+    id 'java-library'
+    id 'se.patrikerdes.use-latest-versions' version '0.2.18'
+    id 'com.github.ben-manes.versions' version '0.42.0'
 }
 
 group 'hexlet.code'
@@ -12,8 +15,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0-RC1'
+
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0-RC1'
 }
 
 test {
@@ -30,4 +36,8 @@ compileJava {
 
 run {
     standardInput = System.in
+}
+
+checkstyle {
+    toolVersion '9.2.1'
 }

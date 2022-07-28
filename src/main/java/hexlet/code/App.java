@@ -3,6 +3,8 @@ package hexlet.code;
 public class App {
     public static void main(String[] args) {
 
+        Greet greet;
+
         var gameNumber = getGameNumberFromUser();
 
         switch (gameNumber) {
@@ -10,10 +12,13 @@ public class App {
                 System.out.println("Goodbye!");
                 return;
             case 1:
-                Greet.showGreeting();
+                greet = new Greet();
+                greet.showGreeting();
                 break;
             case 2:
-                Even.startGame();
+                greet = new Greet();
+                greet.showGreeting();
+                Even.startGame(greet.getUserName());
                 break;
         };
 
@@ -24,6 +29,7 @@ public class App {
                 """
                         Please enter the game number and press Enter.
                         1 - Greet
+                        2 - Even
                         0 - Exit
                         Your choice:\s""";
         var gameNumber = Cli.getUserIntAnswer(questionText);

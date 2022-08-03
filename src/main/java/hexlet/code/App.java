@@ -4,6 +4,15 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Greet;
 
 public class App {
+
+    static final private String GAME_SELECTION_PATTERN = """
+            Please enter the game number and press Enter.
+            1 - Greet
+            2 - Even
+            3 - Calc
+            0 - Exit
+            Your choice: """;
+
     public static void main(String[] args) {
 
         Greet greet;

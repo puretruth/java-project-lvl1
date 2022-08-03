@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Even;
 import hexlet.code.games.Greet;
+import hexlet.code.games.Calc;
 
 public class App {
 
@@ -28,6 +29,11 @@ public class App {
                 greet = new Greet();
                 greet.showGreeting();
                 Even.startGame(greet.getUserName());
+                break;
+            case 3:// calc
+                var calcGame = new Calc();
+                var calcEng = new Engine(calcGame);
+                calcEng.startGame();
                 break;
             default:// exit
                 System.out.println("Goodbye!");

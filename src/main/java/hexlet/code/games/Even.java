@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.games;
 
 import java.util.Random;
 import hexlet.code.Cli;
@@ -14,9 +14,9 @@ public class Even {
         for (var i = 1; i <= loopsForWinCount; i++) {
             var number = randomGenerator.nextInt();
             var answer = Cli.getUserLineAnswer(getQuestion(number));
-            var answerCorrect = isAnswerCorrect(answer, number);
-            if (!answerCorrect) {
-                System.out.println(getGameOver(userName));
+            var correctAnswer = getCorrectAnswer(answer, number);
+            if (!answer.equals(correctAnswer)) {
+                System.out.println(getGameOver(answer, correctAnswer, userName));
                 return;
             }
             System.out.println("Correct!");
@@ -33,24 +33,25 @@ public class Even {
         return question;
     }
 
-    private static boolean isAnswerCorrect(String answer, int number) {
+    private static String getCorrectAnswer(String answer, int number) {
+        String correctAnswer;
         var numberIsEven = (number % 2) == 0;
-        switch (answer) {
-            case "yes":
-                return numberIsEven;
-            case "no":
-                return !numberIsEven;
-            default:
-                return false;
+
+        if(numberIsEven) {
+            correctAnswer = "yes";
+        } else {
+            correctAnswer = "no";
         }
+
+        return correctAnswer;
     }
 
-    private static String getGameOver(String userName) {
+    private static String getGameOver(String answer, String correctAnswer, String userName) {
         var gameOverPattern = """
-                'yes' is wrong answer ;(. Correct answer was 'no'.
+                '%s' is wrong answer ;(. Correct answer was '%s'.
                 Let's try again, %s!
                 """;
-        return String.format(gameOverPattern, userName);
+        return String.format(gameOverPattern, answer, correctAnswer, userName);
     }
 
     private static String getWin(String userName) {

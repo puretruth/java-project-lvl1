@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.games.Even;
+import hexlet.code.games.Greet;
+
 public class App {
     public static void main(String[] args) {
 
@@ -8,18 +11,18 @@ public class App {
         var gameNumber = getGameNumberFromUser();
 
         switch (gameNumber) {
-            case 0:
-                System.out.println("Goodbye!");
-                return;
-            case 1:
+            case 1:// greet
                 greet = new Greet();
                 greet.showGreeting();
                 break;
-            case 2:
+            case 2:// even
                 greet = new Greet();
                 greet.showGreeting();
                 Even.startGame(greet.getUserName());
                 break;
+            default:// exit
+                System.out.println("Goodbye!");
+                return;
         };
 
 

@@ -1,6 +1,4 @@
 /build
 /build/**
-/asciinema_records/**
-/asciinema_records
 /.gradle
 /.gradle/**

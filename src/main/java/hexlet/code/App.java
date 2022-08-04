@@ -6,53 +6,32 @@ import hexlet.code.games.Calc;
 
 public class App {
 
-    static final private String GAME_SELECTION_PATTERN = """
+    private static final String GAME_SELECTION_PATTERN = """
             Please enter the game number and press Enter.
             1 - Greet
             2 - Even
             3 - Calc
             0 - Exit
-            Your choice: """;
+            Your choice:\s""";
 
     public static void main(String[] args) {
 
-        Greet greet;
-
-        var gameNumber = getGameNumberFromUser();
-
-        switch (gameNumber) {
-            case 1:// greet
-                greet = new Greet();
+        switch (Cli.getUserIntAnswer(GAME_SELECTION_PATTERN)) {
+            case 1 -> {// greet
+                var greet = new Greet();
                 greet.showGreeting();
-                break;
-            case 2:// even
-                greet = new Greet();
-                greet.showGreeting();
-                Even.startGame(greet.getUserName());
-                break;
-            case 3:// calc
+            }
+            case 2 -> {// even
+                var evenGame = new Even();
+                var evenEng = new Engine(evenGame);
+                evenEng.startGame();
+            }
+            case 3 -> {// calc
                 var calcGame = new Calc();
                 var calcEng = new Engine(calcGame);
                 calcEng.startGame();
-                break;
-            default:// exit
-                System.out.println("Goodbye!");
-                return;
-        };
-
-
+            }
+            default -> System.out.println("Goodbye!");// exit
+        }
     }
-    private  static int getGameNumberFromUser() {
-        var questionText =
-                """
-                        Please enter the game number and press Enter.
-                        1 - Greet
-                        2 - Even
-                        0 - Exit
-                        Your choice:\s""";
-        var gameNumber = Cli.getUserIntAnswer(questionText);
-
-        return gameNumber;
-    }
-
 }

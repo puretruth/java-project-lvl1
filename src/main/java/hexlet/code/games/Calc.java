@@ -2,27 +2,26 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public class Calc {
-
+public class Calc implements Game {
     public static final String GAME_START_QUESTION = "What is the result of the expression?";
     private static final int MAX_OPERAND_VALUE = 100;
     private static final String[] OPERATORS = {"+", "-", "*"};
     public static final String LAP_QUESTION_PATTERN = "%s %s %s";
 
-    private int operatorsCount;
     private Random operandRandomGenerator;
-    private Random operatorRandomGenerator;
     private String lapAnswer;
 
     public Calc() {
         operandRandomGenerator = new Random();
-        operatorRandomGenerator = new Random();
+    }
+    public String getStartQuestion() {
+        return GAME_START_QUESTION;
     }
 
     public String getLapQuestion() {
         var operand1 = operandRandomGenerator.nextInt(MAX_OPERAND_VALUE);
         var operand2 = operandRandomGenerator.nextInt(MAX_OPERAND_VALUE);
-        var operatorIndex = operatorRandomGenerator.nextInt(OPERATORS.length);
+        var operatorIndex = operandRandomGenerator.nextInt(OPERATORS.length);
 
         var operator = OPERATORS[operatorIndex];
         int lapAnswerInt;
@@ -47,6 +46,4 @@ public class Calc {
     public String getLapAnswer() {
         return lapAnswer;
     }
-
-
 }

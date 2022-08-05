@@ -1,8 +1,11 @@
 package hexlet.code;
 
+import hexlet.code.gameEngine.Engine;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 import hexlet.code.games.Greet;
 import hexlet.code.games.Calc;
+import hexlet.code.utils.Cli;
 
 public class App {
 
@@ -11,6 +14,7 @@ public class App {
             1 - Greet
             2 - Even
             3 - Calc
+            4 - GCD
             0 - Exit
             Your choice:\s""";
 
@@ -18,18 +22,23 @@ public class App {
 
         switch (Cli.getUserIntAnswer(GAME_SELECTION_PATTERN)) {
             case 1 -> {// greet
-                var greet = new Greet();
-                greet.showGreeting();
+                var game = new Greet();
+                game.showGreeting();
             }
             case 2 -> {// even
-                var evenGame = new Even();
-                var evenEng = new Engine(evenGame);
-                evenEng.startGame();
+                var game = new Even();
+                var gameEng = new Engine(game);
+                gameEng.startGame();
             }
             case 3 -> {// calc
-                var calcGame = new Calc();
-                var calcEng = new Engine(calcGame);
-                calcEng.startGame();
+                var game = new Calc();
+                var gameEng = new Engine(game);
+                gameEng.startGame();
+            }
+            case 4 -> {// GCD
+                var game = new GCD();
+                var gameEng = new Engine(game);
+                gameEng.startGame();
             }
             default -> System.out.println("Goodbye!");// exit
         }

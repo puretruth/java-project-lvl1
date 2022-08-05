@@ -31,3 +31,7 @@
 #### Калькулятор: Calc ####
 
 ![Победа](examples/screenshots/calc.png)
+
+#### Определение наибольшего общего делителя: GCD ####
+
+![Победа](examples/screenshots/GCD.png)

@@ -1,6 +1,6 @@
-package hexlet.code;
+package hexlet.code.gameEngine;
 
-import hexlet.code.games.Game;
+import hexlet.code.utils.Cli;
 
 public class Engine {
 
@@ -18,7 +18,7 @@ public class Engine {
     private String userName;
     private final Game game;
 
-    Engine(Game game) {
+    public Engine(Game game) {
         this.game = game;
     }
 

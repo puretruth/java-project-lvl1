@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
+import hexlet.code.utils.Cli;
 
 public class Greet {
 

@@ -1,9 +1,11 @@
 package hexlet.code.games;
 
-import java.util.Random;
-//import hexlet.code.Cli;
+import hexlet.code.gameEngine.Game;
 
-public class Even implements Game  {
+import java.util.Random;
+//import hexlet.code.utils.Cli;
+
+public class Even implements Game {
     public static final String GAME_START_QUESTION = "Answer 'yes' if number even otherwise answer 'no'.";
     public static final String LAP_QUESTION_PATTERN = "%s";
 

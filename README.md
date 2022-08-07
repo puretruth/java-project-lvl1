@@ -39,3 +39,7 @@
 #### "Арифметическая прогрессия": Progression ####
 
 ![Победа](examples/screenshots/progression.png)
+
+#### "Простое ли число?": Prime ####
+
+![Победа](examples/screenshots/prime.png)

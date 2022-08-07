@@ -7,6 +7,7 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Greet;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 public class App {
 
@@ -17,6 +18,7 @@ public class App {
             3 - Calc
             4 - GCD
             5 - Progression
+            6 - Prime
             0 - Exit
             Your choice:\s""";
 
@@ -44,6 +46,11 @@ public class App {
             }
             case 5 -> {// Progression
                 var game = new Progression();
+                var gameEng = new Engine(game);
+                gameEng.startGame();
+            }
+            case 6 -> {// Prime
+                var game = new Prime();
                 var gameEng = new Engine(game);
                 gameEng.startGame();
             }

@@ -1,11 +1,12 @@
 package hexlet.code;
 
 import hexlet.code.gameEngine.Engine;
+import hexlet.code.utils.Cli;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Greet;
 import hexlet.code.games.Calc;
-import hexlet.code.utils.Cli;
+import hexlet.code.games.Progression;
 
 public class App {
 
@@ -15,6 +16,7 @@ public class App {
             2 - Even
             3 - Calc
             4 - GCD
+            5 - Progression
             0 - Exit
             Your choice:\s""";
 
@@ -37,6 +39,11 @@ public class App {
             }
             case 4 -> {// GCD
                 var game = new GCD();
+                var gameEng = new Engine(game);
+                gameEng.startGame();
+            }
+            case 5 -> {// Progression
+                var game = new Progression();
                 var gameEng = new Engine(game);
                 gameEng.startGame();
             }

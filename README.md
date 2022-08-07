@@ -35,3 +35,7 @@
 #### Определение наибольшего общего делителя: GCD ####
 
 ![Победа](examples/screenshots/GCD.png)
+
+#### "Арифметическая прогрессия": Progression ####
+
+![Победа](examples/screenshots/progression.png)

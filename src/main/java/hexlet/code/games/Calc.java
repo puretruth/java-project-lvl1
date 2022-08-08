@@ -38,7 +38,7 @@ public class Calc implements Game {
                 lapAnswerInt = operand1 * operand2;
                 break;
             default:
-                lapAnswerInt = 0;// не найден оператор?
+                lapAnswerInt = 0; // не найден оператор?
         }
         lapAnswer = Integer.toString(lapAnswerInt);
         var question = String.format(LAP_QUESTION_PATTERN, operand1, operator, operand2);

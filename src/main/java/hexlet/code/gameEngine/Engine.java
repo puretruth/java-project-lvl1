@@ -4,22 +4,22 @@ import hexlet.code.utils.Cli;
 
 public class Engine {
 
-    static final private String WELCOME_QUESTION = "Welcome to the Brain Games!\nMay I have your name? ";
-    static final private String WELCOME_GREET_PATTERN = "Hello, %s!\n";
-    static final private String CORRECT_ANSWER_RESPONSE = "Correct!\n";
-    static final private String WIN_RESPONSE_PATTERN = "Congratulations, %s!\n";
-    static final private String DEFEAT_RESPONSE_PATTERN = """
+    private static final String WELCOME_QUESTION = "Welcome to the Brain Games!\nMay I have your name? ";
+    private static final String WELCOME_GREET_PATTERN = "Hello, %s!\n";
+    private static final String CORRECT_ANSWER_RESPONSE = "Correct!\n";
+    private static final String WIN_RESPONSE_PATTERN = "Congratulations, %s!\n";
+    private static final String DEFEAT_RESPONSE_PATTERN = """
             '%s' is wrong answer ;(. Correct answer was '%s'.
             Let's try again, %s!
             """;
-    static final private String LAP_QUESTION_PATTERN = "Question: %s\nYour answer: ";
-    static final private int ROUNDS_NUMBER = 3;
+    private static final String LAP_QUESTION_PATTERN = "Question: %s\nYour answer: ";
+    private static final int ROUNDS_NUMBER = 3;
 
     private String userName;
     private final Game game;
 
-    public Engine(Game game) {
-        this.game = game;
+    public Engine(Game pGame) {
+        this.game = pGame;
     }
 
     public void startGame() {

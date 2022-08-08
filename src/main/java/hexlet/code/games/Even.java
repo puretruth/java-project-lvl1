@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.gameEngine.Game;
 
 import java.util.Random;
-//import hexlet.code.utils.Cli;
 
 public class Even implements Game {
     public static final String GAME_START_QUESTION = "Answer 'yes' if number even otherwise answer 'no'.";

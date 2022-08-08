@@ -6,8 +6,8 @@ public class Greet {
 
     private String userName;
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserName(String pUserName) {
+        this.userName = pUserName;
     }
     public String getUserName() {
         return this.userName;
@@ -15,9 +15,9 @@ public class Greet {
 
     public void showGreeting() {
         System.out.println("Welcome to the Brain Games!");
-        var userName = Cli.getUserLineAnswer("Let me know your name? ");
-        System.out.printf("Hello, %s! \n", userName);
-        setUserName(userName);
+        var pUserName = Cli.getUserLineAnswer("May I have your name? ");
+        System.out.printf("Hello, %s! \n", pUserName);
+        setUserName(pUserName);
     }
 
 }

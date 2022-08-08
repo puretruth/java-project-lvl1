@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.gameEngine.Game;
-import static hexlet.code.utils.Math.GCD;
+import static hexlet.code.utils.Math.gcd;
 import java.util.Random;
 
 public class GCD  implements Game {
@@ -24,7 +24,7 @@ public class GCD  implements Game {
         var operand1 = operandRandomGenerator.nextInt(MAX_OPERAND_VALUE);
         var operand2 = operandRandomGenerator.nextInt(MAX_OPERAND_VALUE);
 
-        var lapAnswerInt = GCD(operand1, operand2);
+        var lapAnswerInt = gcd(operand1, operand2);
         lapAnswer = Integer.toString(lapAnswerInt);
         var question = String.format(LAP_QUESTION_PATTERN, operand1, operand2);
         return question;

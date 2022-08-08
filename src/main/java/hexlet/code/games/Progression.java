@@ -6,6 +6,10 @@ import java.util.Random;
 public class Progression  implements Game {
 
     public static final String GAME_START_QUESTION = "What number is missing in the progression?";
+    public static final int LENGTH_SEED = 7;
+    public static final int LENGTH_ADDITION = 5;
+    public static final int FIRST_ELEMENT_SEED = 100;
+    public static final int STEP_SEED = 100;
 
     private Random randomGenerator;
     private String lapAnswer;
@@ -35,10 +39,10 @@ public class Progression  implements Game {
 
     private String[] getProgression() {
 
-        var progressionLength = randomGenerator.nextInt(7) + 5;
+        var progressionLength = randomGenerator.nextInt(LENGTH_SEED) + LENGTH_ADDITION;
         var progression = new String[progressionLength];
-        var firstElement = randomGenerator.nextInt(100);
-        var step = randomGenerator.nextInt(100);
+        var firstElement = randomGenerator.nextInt(FIRST_ELEMENT_SEED);
+        var step = randomGenerator.nextInt(STEP_SEED);
 
         for (var i = 0; i < progressionLength; i++) {
             progression[i] = Integer.toString(firstElement + step * i);

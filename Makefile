@@ -1,6 +1,5 @@
 
 build: # создание дистрибутива для запуска
-	gradle clean
 	gradle installDist
 
 run: # запуск скомпилированного приложения на bash

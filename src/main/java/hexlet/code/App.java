@@ -11,6 +11,13 @@ import hexlet.code.games.Prime;
 
 public class App {
 
+    private static final int GAME_NUMBER_GREET = 1;
+    private static final int GAME_NUMBER_EVEN = 2;
+    private static final int GAME_NUMBER_CALC = 3;
+    private static final int GAME_NUMBER_GCD = 4;
+    private static final int GAME_NUMBER_PROGRESSION = 5;
+    private static final int GAME_NUMBER_PRIME = 6;
+
     private static final String GAME_SELECTION_PATTERN = """
             Please enter the game number and press Enter.
             1 - Greet
@@ -25,36 +32,36 @@ public class App {
     public static void main(String[] args) {
 
         switch (Cli.getUserIntAnswer(GAME_SELECTION_PATTERN)) {
-            case 1 -> {// greet
+            case GAME_NUMBER_GREET -> {
                 var game = new Greet();
                 game.showGreeting();
             }
-            case 2 -> {// even
+            case GAME_NUMBER_EVEN -> {
                 var game = new Even();
                 var gameEng = new Engine(game);
                 gameEng.startGame();
             }
-            case 3 -> {// calc
+            case GAME_NUMBER_CALC -> {
                 var game = new Calc();
                 var gameEng = new Engine(game);
                 gameEng.startGame();
             }
-            case 4 -> {// GCD
+            case GAME_NUMBER_GCD -> {
                 var game = new GCD();
                 var gameEng = new Engine(game);
                 gameEng.startGame();
             }
-            case 5 -> {// Progression
+            case GAME_NUMBER_PROGRESSION -> {
                 var game = new Progression();
                 var gameEng = new Engine(game);
                 gameEng.startGame();
             }
-            case 6 -> {// Prime
+            case GAME_NUMBER_PRIME -> {
                 var game = new Prime();
                 var gameEng = new Engine(game);
                 gameEng.startGame();
             }
-            default -> System.out.println("Goodbye!");// exit
+            default -> System.out.println("Goodbye!");
         }
     }
 }

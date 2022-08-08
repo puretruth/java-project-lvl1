@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Math {
 
-    public static int GCD (int operand1, int operand2) {
+    public static int gcd(int operand1, int operand2) {
         int tmp;
 
         while (operand2 != 0) {
@@ -15,7 +15,7 @@ public class Math {
 
         return operand1;
     }
-    public static boolean[] primes (int endNumber) {
+    public static boolean[] primes(int endNumber) {
         var primes = new boolean[endNumber + 1];
         Arrays.fill(primes, true);
         primes[0] = false;

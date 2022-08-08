@@ -4,7 +4,7 @@ import hexlet.code.gameEngine.Game;
 import static hexlet.code.utils.Math.gcd;
 import java.util.Random;
 
-public class GCD  implements Game {
+public final class GCD  implements Game {
 
     public static final String GAME_START_QUESTION = "Find the greatest common divisor of given numbers.";
     public static final String LAP_QUESTION_PATTERN = "%s %s";

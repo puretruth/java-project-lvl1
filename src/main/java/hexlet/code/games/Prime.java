@@ -4,7 +4,7 @@ import java.util.Random;
 import hexlet.code.gameEngine.Game;
 import hexlet.code.utils.Math;
 
-public class Prime implements Game {
+public final class Prime implements Game {
 
     public static final String GAME_START_QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static final int PRIMES_UPPER_EDGE = 50;

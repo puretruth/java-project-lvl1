@@ -4,7 +4,7 @@ import hexlet.code.gameEngine.Game;
 
 import java.util.Random;
 
-public class Even implements Game {
+public final class Even implements Game {
     public static final String GAME_START_QUESTION = "Answer 'yes' if number even otherwise answer 'no'.";
     public static final String LAP_QUESTION_PATTERN = "%s";
 

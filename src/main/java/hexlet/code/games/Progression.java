@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.gameEngine.Game;
 import java.util.Random;
 
-public class Progression  implements Game {
+public final class Progression  implements Game {
 
     public static final String GAME_START_QUESTION = "What number is missing in the progression?";
     public static final int LENGTH_SEED = 7;

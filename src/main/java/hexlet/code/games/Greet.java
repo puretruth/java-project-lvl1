@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.utils.Cli;
 
-public class Greet {
+public final class Greet {
 
     private String userName;
 

@@ -4,7 +4,7 @@ import hexlet.code.gameEngine.Game;
 
 import java.util.Random;
 
-public class Calc implements Game {
+public final class Calc implements Game {
     public static final String GAME_START_QUESTION = "What is the result of the expression?";
     private static final int MAX_OPERAND_VALUE = 100;
     private static final String[] OPERATORS = {"+", "-", "*"};

@@ -2,7 +2,7 @@ package hexlet.code.gameEngine;
 
 import hexlet.code.utils.Cli;
 
-public class Engine {
+public final class Engine {
 
     private static final String WELCOME_QUESTION = "Welcome to the Brain Games!\nMay I have your name? ";
     private static final String WELCOME_GREET_PATTERN = "Hello, %s!\n";
